@@ -12,7 +12,9 @@ const Pagination = (props)=>{
         <div className="container">
             <div className="row">
                 <ul className="pages">
+                    {props.currentPage > 1 ? <li className='pages' onClick={()=> props.nextPage(props.currentPage - 1)}><a href="#">Previous</a></li>: ''}
                     {pageNum}
+                    {props.currentPage < props.pages + 1 ? <li className='pages' onClick={()=> props.nextPage(props.currentPage + 1)}><a href="#">Next</a></li>: ''}
                 </ul>
             </div>
         </div>
