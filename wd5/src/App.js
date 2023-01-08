@@ -67,7 +67,7 @@ class App extends Component{
           </div> : <MovieDetails currentMovie={this.state.currentMovie} closeDetails={this.closeDetails}/>
         }
         
-        {this.state.totalMovies > 20 ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
+        {this.state.totalMovies > 20 && this.currentMovie == null ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
         {/* if movie results is more than 20, the pagination bar will show */}
       </div>
     )
