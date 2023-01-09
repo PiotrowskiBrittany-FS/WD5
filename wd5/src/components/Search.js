@@ -3,11 +3,9 @@ import React from "react";
 const Search = (props)=>{
     return(
         <div style={styles.searchWrapper}>
-            <div style={styles.searchContainer}>
-                <form action="" onSubmit={props.handleSubmit}>
-                    <input type="text" placeholder="Search for a Movie" onChange={props.handleChange}></input>
-                </form>
-            </div>
+            <form action="" onSubmit={props.handleSubmit}>
+                <input style={styles.searchContainer} type="text" placeholder="Search for a Movie" onChange={props.handleChange}></input>
+            </form>
         </div>
     )
 }
@@ -20,6 +18,7 @@ const styles = {
         justifyContent: "space-between"
     },
     searchContainer:{
-        
+        width: "50rem",
+        height: "2rem"
     }
 }

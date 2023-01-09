@@ -1,16 +1,22 @@
 import React from "react";
-//import {Button, Container, Row, Card} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 
 const Movie = (props)=>{
     return (
-        <article style={styles.container}>
+        <Card style={{width: "18rem"}}>
+        <Card.Body>
             <section style={styles.card}>
                 {
                     props.image == null ? <img src={`https://www.prokerala.com/movies/assets/img/no-poster-available.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
                 }
-                <a href="#" onClick={()=> props.viewDetails(props.movieId)}>View Details</a>
             </section>
-        </article>
+            
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Subtitle>{props.release_date}</Card.Subtitle>
+                <Card.Text>{props.overview}</Card.Text>
+                <a href="#" onClick={()=> props.viewDetails(props.movieId)}>View Details</a>
+            </Card.Body>
+        </Card>
     )
 }
 

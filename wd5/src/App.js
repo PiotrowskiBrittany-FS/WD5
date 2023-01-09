@@ -56,7 +56,7 @@ class App extends Component{
   }
 
   render(){
-    const numberPages = Math.floor(this.state.totalMovies / 20);
+    const numberPages = Math.floor(this.state.totalMovies / 12);
     return(
       <div style={styles.wrapper}>
         <Navigation />
@@ -67,26 +67,25 @@ class App extends Component{
           </div> : <MovieDetails style={styles.details} currentMovie={this.state.currentMovie} closeDetails={this.closeDetails}/>
         }
         
-        {this.state.totalMovies > 20 && this.currentMovie == null ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
-        {/* if movie results is more than 20, the pagination bar will show */}
+        {this.state.totalMovies > 12 && this.currentMovie == null ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
+        {/* if movie results is more than 12, the pagination bar will show */}
       </div>
     )
   }
 }
 
 
-
-
-
 export default App;
+
+
 
 const styles = {
   wrapper: {
-    margin: "2rem"
+    margin: "2rem",
+    backgroundColor: "000"
   },
   movies: {
     display: "flex",
-    width: "calc(50%/4 - 1rem)"
   },
   search: {
     display: "flex",

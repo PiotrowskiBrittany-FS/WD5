@@ -1,18 +1,19 @@
 import React from "react";
 import Movie from "./Movie";
+import { Row } from 'react-bootstrap';
 
 const MovieList = (props)=>{
     return(
         <div style={styles.container}>
-            <div style={styles.row}>
+            <Row className="class-name row row-cols-4">
                 {
                     props.movies.map((movie, i) =>{
                         return(
-                            <Movie key={i} viewDetails={props.viewDetails} movieId={movie.id} image={movie.poster_path}/>
+                            <Movie key={i} viewDetails={props.viewDetails} title={movie.title} movieId={movie.id} image={movie.poster_path}/>
                         )
                     })
                 }
-            </div>
+            </Row>
         </div>
     )
     
