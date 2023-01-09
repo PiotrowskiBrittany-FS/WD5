@@ -88,11 +88,7 @@ const styles = {
     display: "flex",
   },
   search: {
-    display: "flex",
-    justifyContent: "space-between",
-    margin: "2rem",
     padding: "2rem",
-    width: "15rem"
   },
   list:{
     margin: "2rem",

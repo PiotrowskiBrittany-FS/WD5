@@ -15,10 +15,10 @@ export default Search;
 const styles = {
     searchWrapper:{
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-around"
     },
     searchContainer:{
         width: "50rem",
-        height: "2rem"
+        height: "1.5rem"
     }
 }
