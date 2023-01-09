@@ -25,15 +25,26 @@ export default Pagination;
 
 const styles = {
     active:{
-        fontWeight: "bold"
+        fontWeight: "bold",
+        padding: "0.25rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     },
     container:{
-
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     },
     row:{
-
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "0.25rem"
     },
     pages:{
-
+        display: "flex",
+        justifyContent: "space-between",
+        listStyle: "none",
+        padding: "0.25rem"
     }
 }
