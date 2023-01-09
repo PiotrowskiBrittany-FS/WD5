@@ -1,4 +1,5 @@
 import React from "react";
+//import {Button, Container, Row, Card} from 'react-bootstrap';
 
 const Movie = (props)=>{
     return (
