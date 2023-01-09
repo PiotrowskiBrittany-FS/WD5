@@ -58,13 +58,13 @@ class App extends Component{
   render(){
     const numberPages = Math.floor(this.state.totalMovies / 20);
     return(
-      <div className='App'>
+      <div style={styles.wrapper}>
         <Navigation />
         {this.state.currentMovie == null ? 
-          <div>
-            <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-            <MovieList viewDetails={this.viewDetails} movies={this.state.movies}/>
-          </div> : <MovieDetails currentMovie={this.state.currentMovie} closeDetails={this.closeDetails}/>
+          <div style={styles.movies}>
+            <Search style={styles.search} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+            <MovieList style={styles.list} viewDetails={this.viewDetails} movies={this.state.movies}/>
+          </div> : <MovieDetails style={styles.details} currentMovie={this.state.currentMovie} closeDetails={this.closeDetails}/>
         }
         
         {this.state.totalMovies > 20 && this.currentMovie == null ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
@@ -72,8 +72,6 @@ class App extends Component{
       </div>
     )
   }
-
-
 }
 
 
@@ -81,3 +79,27 @@ class App extends Component{
 
 
 export default App;
+
+const styles = {
+  wrapper: {
+    margin: "2rem"
+  },
+  movies: {
+    display: "flex",
+    width: "calc(50%/4 - 1rem)"
+  },
+  search: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "2rem",
+    padding: "2rem",
+    width: "15rem"
+  },
+  list:{
+    margin: "2rem",
+    padding: "2rem"
+  },
+  details: {
+    margin: "2rem"
+  }
+}

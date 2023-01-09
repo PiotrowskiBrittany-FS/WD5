@@ -2,17 +2,30 @@ import React from "react";
 
 const Movie = (props)=>{
     return (
-        <div className="col">
-            <div className="card">
+        <article style={styles.container}>
+            <section style={styles.card}>
                 {
-                    props.image == null ? <img src={`https://s3-ap-southeast1.amazonaws.com/upcode/static/default-image.jpg`} alt="card image" style={{width: "100%", height: "360"}} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={{width: "100%", height: "360"}}/> 
+                    props.image == null ? <img src={`https://s3-ap-southeast1.amazonaws.com/upcode/static/default-image.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
                 }
-            </div>
-            <div className="card-content">
                 <a href="#" onClick={()=> props.viewDetails(props.movieId)}>View Details</a>
-            </div>
-        </div>
+            </section>
+        </article>
     )
 }
 
 export default Movie;
+
+const styles = {
+    container:{
+        display: "flex",
+        flexWrap: "wrap",
+        width: "calc(50% / 4 - 1rem)",
+    },
+    card:{
+
+    },
+    images:{
+        width: "15rem",
+        height: "25rem"
+    }
+}
