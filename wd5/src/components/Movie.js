@@ -5,7 +5,7 @@ const Movie = (props)=>{
         <article style={styles.container}>
             <section style={styles.card}>
                 {
-                    props.image == null ? <img src={`https://s3-ap-southeast1.amazonaws.com/upcode/static/default-image.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
+                    props.image == null ? <img src={`https://www.prokerala.com/movies/assets/img/no-poster-available.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
                 }
                 <a href="#" onClick={()=> props.viewDetails(props.movieId)}>View Details</a>
             </section>
@@ -22,7 +22,8 @@ const styles = {
         width: "calc(50% / 4 - 1rem)",
     },
     card:{
-
+        backgroundColor: "#fff",
+        padding: "2rem",
     },
     images:{
         width: "15rem",
