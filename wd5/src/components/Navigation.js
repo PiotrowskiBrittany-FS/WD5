@@ -4,7 +4,7 @@ const Navigation = ()=>{
     return(
         <nav>
             <div className="nav-wrapper">
-                <h1><a href="#" className="logo">Movie Finder</a></h1>
+                <h1><a href="#" className="logo">Popcorn Up</a></h1>
             </div>
         </nav>
     )
