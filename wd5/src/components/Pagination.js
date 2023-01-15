@@ -58,6 +58,7 @@ const styles = {
     },
     links:{
         textDecoration: "none",
-        color: "#000"
+        color: "#000",
+        fontWeight: "bold"
     }
 }
