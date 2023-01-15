@@ -12,9 +12,9 @@ const Pagination = (props)=>{
         <div style={styles.container}>
             <div style={styles.row}>
                 <ul style={styles.pages}>
-                    {props.currentPage > 1 ? <li style={styles.pages} onClick={()=> props.nextPage(props.currentPage - 1)}><a href="#">Previous</a></li>: ''}
+                    {props.currentPage > 1 ? <li style={styles.prevnext} onClick={()=> props.nextPage(props.currentPage - 1)}><a href="#">Previous</a></li>: ''}
                     {pageNum}
-                    {props.currentPage < props.pages + 1 ? <li style={styles.pages} onClick={()=> props.nextPage(props.currentPage + 1)}><a href="#">Next</a></li>: ''}
+                    {props.currentPage < props.pages + 1 ? <li style={styles.prevnext} onClick={()=> props.nextPage(props.currentPage + 1)}><a href="#">Next</a></li>: ''}
                 </ul>
             </div>
         </div>
@@ -29,7 +29,11 @@ const styles = {
         padding: "0.25rem",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        borderStyle: "solid",
+        borderWidth: "1px",
+        padding: "10px",
+        textDecoration: "none"
     },
     container:{
         display: "flex",
@@ -45,6 +49,13 @@ const styles = {
         display: "flex",
         justifyContent: "space-between",
         listStyle: "none",
-        padding: "0.25rem"
+        padding: "0.25rem",
+        textDecoration: "none"
+    },
+    prevnext:{
+        borderStyle: "solid",
+        borderWidth: "1px",
+        padding: "1rem",
+        textDecoration: "none"
     }
 }
