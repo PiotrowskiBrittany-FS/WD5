@@ -6,15 +6,15 @@ const Pagination = (props)=>{
     for(let i = 1; i <= props.pages + 1; i++){
         let active = props.currentPage === i ? 'active' : '';
 
-        pageNum.push(<li className={active} style={styles.active} key={i} onClick={()=> props.nextPage(i)}><a href="#">{i}</a></li>)
+        pageNum.push(<li className={active} style={styles.active} key={i} onClick={()=> props.nextPage(i)}><a href="#" style={styles.links}>{i}</a></li>)
     }
     return(
         <div style={styles.container}>
             <div style={styles.row}>
                 <ul style={styles.pages}>
-                    {props.currentPage > 1 ? <li style={styles.prevnext} onClick={()=> props.nextPage(props.currentPage - 1)}><a href="#">Previous</a></li>: ''}
+                    {props.currentPage > 1 ? <li style={styles.prevnext} onClick={()=> props.nextPage(props.currentPage - 1)}><a href="#" style={styles.links}>Previous</a></li>: ''}
                     {pageNum}
-                    {props.currentPage < props.pages + 1 ? <li style={styles.prevnext} onClick={()=> props.nextPage(props.currentPage + 1)}><a href="#">Next</a></li>: ''}
+                    {props.currentPage < props.pages + 1 ? <li style={styles.prevnext} onClick={()=> props.nextPage(props.currentPage + 1)}><a href="#" style={styles.links}>Next</a></li>: ''}
                 </ul>
             </div>
         </div>
@@ -33,7 +33,7 @@ const styles = {
         borderStyle: "solid",
         borderWidth: "1px",
         padding: "10px",
-        textDecoration: "none"
+        
     },
     container:{
         display: "flex",
@@ -50,12 +50,14 @@ const styles = {
         justifyContent: "space-between",
         listStyle: "none",
         padding: "0.25rem",
-        textDecoration: "none"
     },
     prevnext:{
         borderStyle: "solid",
         borderWidth: "1px",
         padding: "1rem",
-        textDecoration: "none"
+    },
+    links:{
+        textDecoration: "none",
+        color: "#000"
     }
 }
