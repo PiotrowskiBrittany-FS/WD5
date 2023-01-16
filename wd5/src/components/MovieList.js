@@ -1,11 +1,15 @@
 import React from "react";
 import Movie from "./Movie";
-import { Row } from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
+import {Row}  from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 
 const MovieList = (props)=>{
     return(
-        <div style={styles.container}>
-            <Row className="class-name row row-cols-4">
+        <Container>
+            <Row>
+                <Col sm={4}>
+                <div style={styles.container}>
                 {
                     props.movies.map((movie, i) =>{
                         return(
@@ -13,8 +17,11 @@ const MovieList = (props)=>{
                         )
                     })
                 }
+                </div>
+                </Col>
             </Row>
-        </div>
+        </Container>
+        
     )
     
 }
