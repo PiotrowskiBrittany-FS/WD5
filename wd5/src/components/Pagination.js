@@ -33,7 +33,7 @@ const styles = {
         borderStyle: "solid",
         borderWidth: "1px",
         padding: "10px",
-        
+        backgroundColor: "#F2B705"
     },
     container:{
         display: "flex",
@@ -55,10 +55,11 @@ const styles = {
         borderStyle: "solid",
         borderWidth: "1px",
         padding: "1rem",
+        backgroundColor: "#F2B705"
     },
     links:{
         textDecoration: "none",
         color: "#000",
-        fontWeight: "bold"
+        fontWeight: "bold",
     }
 }
