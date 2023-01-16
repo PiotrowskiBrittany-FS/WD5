@@ -59,7 +59,6 @@ const styles = {
         backgroundColor: "#F2B705",
         textDecoration: "none",
         color: "#000",
-        // fontWeight: "bold",
         boxShadow: "2px 2px 5px #888",
         display: "flex",
         alignSelf: "flex-end",
