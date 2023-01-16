@@ -3,16 +3,10 @@ import React from "react";
 const Navigation = ()=>{
     return(
         <nav>
-            <div style={styles.navWrapper}>
+            <div>
                 <h1>Popcorner</h1>
             </div>
         </nav>
     )
 }
 export default Navigation;
-
-const styles = {
-    navWrapper:{
-        display: "flex",
-    }
-}

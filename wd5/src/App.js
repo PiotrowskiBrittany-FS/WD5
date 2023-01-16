@@ -7,6 +7,7 @@ import MovieDetails from './components/MovieDetails';
 import {Container} from 'react-bootstrap';
 import {Row}  from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
+import Image from './images/popcorn.jpg';
 
 class App extends Component{
   constructor(){
@@ -91,7 +92,7 @@ export default App;
 const styles = {
   wrapper: {
     margin: "2rem",
-    backgroundColor: "000"
+    backgroundColor: "#000"
   },
   movies: {
     display: "block",
@@ -101,7 +102,7 @@ const styles = {
   },
   list:{
     margin: "2rem",
-    padding: "2rem"
+    padding: "2rem",
   },
   details: {
     margin: "2rem"

@@ -26,7 +26,7 @@ export default MovieDetails;
 
 const styles ={
     images:{
-    width: "15rem",
-    height: "25rem"
+        width: "15rem",
+        height: "25rem"
     }
 }

@@ -6,22 +6,15 @@ import {Col} from 'react-bootstrap';
 
 const MovieList = (props)=>{
     return(
-        <Container>
-            <Row>
-                <Col sm={4}>
-                <div style={styles.container}>
-                {
-                    props.movies.map((movie, i) =>{
-                        return(
-                            <Movie key={i} viewDetails={props.viewDetails} title={movie.title} movieId={movie.id} image={movie.poster_path}/>
-                        )
-                    })
-                }
-                </div>
-                </Col>
-            </Row>
-        </Container>
-        
+        <div style={styles.container}>
+        {
+            props.movies.map((movie, i) =>{
+                return(
+                    <Movie key={i} viewDetails={props.viewDetails} title={movie.title} movieId={movie.id} image={movie.poster_path}/>
+                    )
+                })
+            }
+        </div>
     )
     
 }
