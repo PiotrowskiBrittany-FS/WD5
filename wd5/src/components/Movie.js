@@ -15,8 +15,8 @@ const Movie = (props)=>{
                                 {
                                     props.image == null ? <img src={`https://www.prokerala.com/movies/assets/img/no-poster-available.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
                                 }
-                                <Card.Title >{props.title}</Card.Title>
-                                <a href="#" onClick={()=> props.viewDetails(props.movieId)} >View Details</a>
+                                <Card.Title style={styles.text}>{props.title}</Card.Title>
+                                <a href="#" onClick={()=> props.viewDetails(props.movieId)} style={styles.button}>View Details</a>
                             </section>
                         </Card.Body>
                     </Card>
@@ -34,19 +34,41 @@ const styles = {
     },
     card:{
         backgroundColor: "#fff",
-        height: "25rem",
+        height: "30rem",
         marginTop: "2rem",
         color: "#000",
-        paddingBottom: "3rem",
+        paddingBottom: "5rem",
         paddingTop: "1rem",
         backgroundColor: "#fff",
         width: "15rem",
         paddingLeft: "1rem",
         paddingRight: "1rem"
     },
+    text: {
+        marginBotton: "1rem",
+        paddingBottom: "1.5rem",
+        fontWeight: "bold",
+        paddingTop: "0.2rem"
+    },
+    button: {
+        borderStyle: "solid",
+        borderWidth: "0px",
+        borderRadius: "10px",
+        padding: "0.25rem",
+        marginTop: "2rem",
+        backgroundColor: "#F2B705",
+        textDecoration: "none",
+        color: "#000",
+        // fontWeight: "bold",
+        boxShadow: "2px 2px 5px #888",
+        display: "flex",
+        alignSelf: "flex-end",
+        justifyContent: "center",
+        marginBottom: "1rem"
+    },
     images:{
         width: "15rem",
-        height: "25rem"
+        height: "25rem",
     },
 
 }
