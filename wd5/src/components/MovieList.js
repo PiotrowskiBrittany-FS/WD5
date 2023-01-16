@@ -1,8 +1,5 @@
 import React from "react";
 import Movie from "./Movie";
-import {Container} from 'react-bootstrap';
-import {Row}  from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
 
 const MovieList = (props)=>{
     return(
@@ -23,7 +20,12 @@ export default MovieList;
 
 const styles = {
     container:{
-        paddingTop: "5rem"
+        paddingTop: "5rem",
+        width: "90%",
+        display: "flex",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        flexDirection: "row"
     },
 
 }

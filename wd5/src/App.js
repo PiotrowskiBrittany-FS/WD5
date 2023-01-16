@@ -7,7 +7,6 @@ import MovieDetails from './components/MovieDetails';
 import {Container} from 'react-bootstrap';
 import {Row}  from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
-import Image from './images/popcorn.jpg';
 
 class App extends Component{
   constructor(){
