@@ -6,23 +6,17 @@ import {Container} from 'react-bootstrap';
 
 const Movie = (props)=>{
     return (
-        <Container>
-            <Row>
-                <Col lg={4}>
-                    <Card style={{width: "18rem"}}>
-                        <Card.Body style={styles.cardContainer}>
-                            <section style={styles.card}>
-                                {
-                                    props.image == null ? <img src={`https://www.prokerala.com/movies/assets/img/no-poster-available.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
-                                }
-                                <Card.Title style={styles.text}>{props.title}</Card.Title>
-                                <a href="#" onClick={()=> props.viewDetails(props.movieId)} style={styles.button}>View Details</a>
-                            </section>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+        <div style={{width: "18rem"}}>
+            <div style={styles.cardContainer}>
+                <section style={styles.card}>
+                    {
+                        props.image == null ? <img src={`https://www.prokerala.com/movies/assets/img/no-poster-available.jpg`} alt="card image" style={styles.images} />: <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="card image" style={styles.images}/> 
+                    }
+                    <h2 style={styles.text}>{props.title}</h2>
+                    <a href="#" onClick={()=> props.viewDetails(props.movieId)} style={styles.button}>View Details</a>
+                </section>
+            </div>
+        </div>
     )
 }
 
@@ -48,7 +42,8 @@ const styles = {
         marginBotton: "1rem",
         paddingBottom: "1.5rem",
         fontWeight: "bold",
-        paddingTop: "0.2rem"
+        paddingTop: "0.2rem",
+        fontSize: "16px"
     },
     button: {
         borderStyle: "solid",

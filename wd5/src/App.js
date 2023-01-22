@@ -4,7 +4,7 @@ import Search from "./components/Search";
 import MovieList from './components/MovieList';
 import Pagination from './components/Pagination';
 import MovieDetails from './components/MovieDetails';
-
+import PopularMovies from './components/PopularMovies';
 
 class App extends Component{
   constructor(){
@@ -17,7 +17,6 @@ class App extends Component{
       currentMovie: null
     }
     this.apiKey = 'd90675c6ac13f9cd080926e402046ab1'
-
   }
 
   handleSubmit = (e)=>{
@@ -56,7 +55,7 @@ class App extends Component{
   }
 
   render(){
-    const numberPages = Math.floor(this.state.totalMovies / 12);
+    const numberPages = Math.floor(this.state.totalMovies / 20);
     return(
       <div style={styles.container}>
         <div style={styles.wrapper}>
@@ -68,8 +67,8 @@ class App extends Component{
             </div> : <MovieDetails style={styles.details} currentMovie={this.state.currentMovie} closeDetails={this.closeDetails}/>
           }
           
-          {this.state.totalMovies > 12 && this.currentMovie == null ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
-          {/* if movie results is more than 12, the pagination bar will show */}
+          {this.state.totalMovies > 20 && this.currentMovie == null ? <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
+          {/* if movie results is more than 20, the pagination bar will show */}
         </div>
       </div>
     )
