@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Routes, Route} from 'react-router-dom'
 import Navigation from "./components/Navigation";
 import Search from "./components/Search";
 import MovieList from './components/MovieList';
@@ -60,6 +61,10 @@ class App extends Component{
       <div style={styles.container}>
         <div style={styles.wrapper}>
           <Navigation />
+          <section>
+            <Route exact path="/"/>
+            <Route path="popularmovies"element={<PopularMovies />}/>
+          </section>
           {this.state.currentMovie == null ? 
             <div style={styles.movies}>
               <Search style={styles.search} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>

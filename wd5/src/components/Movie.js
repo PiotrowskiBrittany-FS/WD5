@@ -33,7 +33,6 @@ const styles = {
         color: "#000",
         paddingBottom: "5rem",
         paddingTop: "1rem",
-        backgroundColor: "#fff",
         width: "15rem",
         paddingLeft: "1rem",
         paddingRight: "1rem"

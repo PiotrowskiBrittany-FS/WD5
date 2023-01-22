@@ -26,7 +26,6 @@ export default Pagination;
 const styles = {
     active:{
         fontWeight: "bold",
-        padding: "0.25rem",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
