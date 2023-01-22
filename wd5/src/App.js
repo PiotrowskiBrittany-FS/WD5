@@ -4,9 +4,7 @@ import Search from "./components/Search";
 import MovieList from './components/MovieList';
 import Pagination from './components/Pagination';
 import MovieDetails from './components/MovieDetails';
-import {Container} from 'react-bootstrap';
-import {Row}  from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
+
 
 class App extends Component{
   constructor(){
@@ -24,13 +22,12 @@ class App extends Component{
 
   handleSubmit = (e)=>{
     e.preventDefault();
-
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.userSearch}`)
-    .then(data => data.json())
-    .then(data => {
-      console.log(data);
-      this.setState({movies: [...data.results], totalMovies: data.total_results})
-    })
+      fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.userSearch}`)
+      .then(data => data.json())
+      .then(data => {
+        console.log(data);
+        this.setState({movies: [...data.results], totalMovies: data.total_results})
+      })
   }
 
   handleChange = (e)=>{
@@ -67,13 +64,7 @@ class App extends Component{
           {this.state.currentMovie == null ? 
             <div style={styles.movies}>
               <Search style={styles.search} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-              <Container fluid>
-                <Row>
-                  <Col>
                     <MovieList style={styles.list} viewDetails={this.viewDetails} movies={this.state.movies}/>
-                  </Col>
-                </Row>
-              </Container>
             </div> : <MovieDetails style={styles.details} currentMovie={this.state.currentMovie} closeDetails={this.closeDetails}/>
           }
           
