@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import {Routes, Route} from 'react-router-dom'
+
+//Components
 import Navigation from "./components/Navigation";
 import Search from "./components/Search";
 import MovieList from './components/MovieList';
 import Pagination from './components/Pagination';
 import MovieDetails from './components/MovieDetails';
-import PopularMovies from './components/PopularMovies';
+
+//Routes
+import PopularMovies from './pages/PopularMovies';
 
 class App extends Component{
   constructor(){
@@ -28,7 +32,7 @@ class App extends Component{
         console.log(data);
         this.setState({movies: [...data.results], totalMovies: data.total_results})
       })
-  }
+  } 
 
   handleChange = (e)=>{
     e.preventDefault();
