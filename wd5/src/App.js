@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Routes, Route} from 'react-router-dom'
+//import {Routes, Route} from 'react-router-dom'
 
 //Components
 import Navigation from "./components/Navigation";
@@ -9,7 +9,7 @@ import Pagination from './components/Pagination';
 import MovieDetails from './components/MovieDetails';
 
 //Routes
-import PopularMovies from './pages/PopularMovies';
+//import PopularMovies from './pages/PopularMovies';
 
 class App extends Component{
   constructor(){
@@ -65,10 +65,12 @@ class App extends Component{
       <div style={styles.container}>
         <div style={styles.wrapper}>
           <Navigation />
-          <section>
-            <Route exact path="/"/>
-            <Route path="popularmovies"element={<PopularMovies />}/>
-          </section>
+          {/* <section>
+            <Routes>
+              <Route exact path="/"/>
+              <Route path="popularmovies"element={<PopularMovies />}/>
+            </Routes>
+          </section> */}
           {this.state.currentMovie == null ? 
             <div style={styles.movies}>
               <Search style={styles.search} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
