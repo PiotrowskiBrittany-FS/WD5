@@ -1,12 +1,13 @@
 import React from "react";
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Navigation = ()=>{
     return(
         <nav>
             <div>
-                <h1>Popcorner</h1>
-                {/* <Link style={styles.links} to='/popularmovies'>Popular Movies</Link> */}
+                <Link to="/Home"> Home </Link>
+                <Link to="/SearchMovies">Search Movies</Link>
+                <Link style={styles.links} to='/PopularMovies'>Popular Movies</Link>
             </div>
         </nav>
     )
