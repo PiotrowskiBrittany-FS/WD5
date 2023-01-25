@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Router, Routes, Route} from 'react-router-dom'
+import React from 'react';
+import { Routes, Route} from 'react-router-dom'
 
 //Components
 import Navigation from "./components/Navigation";
@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 
 //Routes
 import PopularMovies from './pages/PopularMovies';
+import SearchMovies from './pages/SearchMovies';
 import Home from './pages/Home';
 
 function App(){
@@ -17,6 +18,7 @@ function App(){
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Home" element={<Home />}/>
+          <Route exact path="/SearchMovies" element={<SearchMovies />}/>
           <Route path="/PopularMovies" element={<PopularMovies />} />
         </Routes>
       </div>
