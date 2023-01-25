@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 const Navigation = ()=>{
     return(
         <div>
-            <Link to="/Home"> Home </Link>
-            <Link to="/SearchMovies">Search Movies</Link>
+            <Link style={styles.links} to="/Home"> Popcorner </Link>
+            <Link style={styles.links} to="/SearchMovies">Search Movies</Link>
             <Link style={styles.links} to='/PopularMovies'>Popular Movies</Link>
         </div>
     )
