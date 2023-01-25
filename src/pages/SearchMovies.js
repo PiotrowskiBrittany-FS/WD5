@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 
 //Components 
-//import Navigation from "./components/Navigation";
 import Search from "../components/Search";
 import MovieList from '../components/MovieList';
 import Pagination from '../components/Pagination';
