@@ -37,7 +37,8 @@ const styles = {
     container:{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop: '2rem'
     },
     row:{
         display: "flex",

@@ -93,7 +93,7 @@ export default App;
 
 const styles = {
   container: {
-    backgroundColor: "#D9D9D9"
+    backgroundColor: "#fff"
   },
   wrapper: {
     margin: "2rem",

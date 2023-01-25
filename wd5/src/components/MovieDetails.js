@@ -29,7 +29,7 @@ export default MovieDetails;
 const styles ={
     container:{
         display: "flex",
-        justifyContent: "space-around"
+        justifyContent: "space-between"
     },
     back: {
         borderStyle: "solid",
