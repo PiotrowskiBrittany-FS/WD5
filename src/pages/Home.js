@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 const Home = () =>{
   return(
     <div>
-      <h1>Popcorner</h1>
       <h2>Movie Database</h2>
       <div style={styles.links}>
         <Link style={styles.route} to="/SearchMovies">Search Movies</Link>
@@ -22,13 +21,20 @@ const styles ={
         display: 'flex',
         justifyContent: 'space-around',
         marginTop: '2rem',
+        marginRight: '5rem',
+        marginLeft: '5rem'
     },
     route:{
         color: '#000',
         textDecoration: 'none',
         borderStyle: 'solid',
-        padding: '0.25rem',
+        padding: '2rem',
         borderRadius: '10px',
-        cursor: 'pointer'
+        borderWidth: '0px',
+        cursor: 'pointer',
+        boxShadow: "2px 2px 5px #888",
+        backgroundColor: '#F2B705',
+        fontWeight: 'bold',
+        fontSize: '24px'
     }
 }
