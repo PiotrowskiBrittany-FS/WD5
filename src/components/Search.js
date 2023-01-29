@@ -20,7 +20,7 @@ const styles = {
         justifyContent: "space-around"
     },
     searchContainer:{
-        width: "50rem",
+        width: "50%",
         height: "1.5rem"
     }
 }
