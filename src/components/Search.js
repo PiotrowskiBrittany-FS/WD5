@@ -17,7 +17,8 @@ export default Search;
 const styles = {
     searchWrapper:{
         display: "flex",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        width: "50%"
     },
     searchContainer:{
         width: "50%",
