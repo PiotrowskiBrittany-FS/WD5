@@ -93,6 +93,7 @@ class SearchMovies extends Component{
     },
     search: {
       padding: "2rem",
+      width: "50%"
     },
     list:{
       margin: "2rem",
