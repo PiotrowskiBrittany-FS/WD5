@@ -8,6 +8,7 @@ const Navigation = ()=>{
             <div style={styles.buttons}>
                 <Link style={styles.links} to="/SearchMovies">Search Movies</Link>
                 <Link style={styles.links} to='/PopularMovies'>Popular Movies</Link>
+                <Link style={styles.route} to='/UpcomingMovies'>Upcoming Movies</Link>
             </div>
         </div>
     )
