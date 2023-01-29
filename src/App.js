@@ -10,6 +10,7 @@ import Navigation from "./components/Navigation";
 import PopularMovies from './pages/PopularMovies';
 import SearchMovies from './pages/SearchMovies';
 import Home from './pages/Home';
+import UpcomingMovies from './pages/UpcomingMovies';
 
 function App(){
   return(
@@ -21,6 +22,7 @@ function App(){
           <Route exact path="/Home" element={<Home />}/>
           <Route exact path="/SearchMovies" element={<SearchMovies />}/>
           <Route path="/PopularMovies" element={<PopularMovies />} />
+          <Route path="/UpcomingMovies" element={<UpcomingMovies />}/>
         </Routes>
       </div>
     </div>

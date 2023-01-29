@@ -8,7 +8,7 @@ const Home = () =>{
       <div style={styles.links}>
         <Link style={styles.route} to="/SearchMovies">Search Movies</Link>
         <Link style={styles.route} to='/PopularMovies'>Popular Movies</Link>
-        <Link style={styles.links} to='/UpcomingMovies'>Upcoming Movies</Link>
+        <Link style={styles.route} to='/UpcomingMovies'>Upcoming Movies</Link>
       </div>
         
     </div>
@@ -23,7 +23,9 @@ const styles ={
         justifyContent: 'space-around',
         marginTop: '2rem',
         marginRight: '5rem',
-        marginLeft: '5rem'
+        marginLeft: '5rem',
+        flexWrap: "wrap",
+        
     },
     route:{
         color: '#000',
@@ -36,6 +38,9 @@ const styles ={
         boxShadow: "2px 2px 5px #888",
         backgroundColor: '#F2B705',
         fontWeight: 'bold',
-        fontSize: '24px'
+        fontSize: '24px',
+        width: '10rem',
+        textAlign: 'center',
+        margin: '1rem'
     }
 }

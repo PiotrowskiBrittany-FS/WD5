@@ -1,10 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Logo from '../images/popcornerLogo.jpg'
 
 const Navigation = ()=>{
     return(
         <div style={styles.container}>
-            <Link style={styles.logo} to="/Home"> Popcorner </Link>
+            <Link style={styles.logo} to="/Home"> <img src={Logo} alt="logo"></img> </Link>
             <div style={styles.buttons}>
                 <Link style={styles.links} to="/SearchMovies">Search Movies</Link>
                 <Link style={styles.links} to='/PopularMovies'>Popular Movies</Link>
@@ -19,6 +20,7 @@ const styles ={
     container: {
         display: 'flex',
         justifyContent: 'space-between',
+        flexWrap: 'wrap'
     },
     logo:{
         fontSize: '36px',
@@ -27,7 +29,9 @@ const styles ={
         color: '#000'
     },
     buttons:{
-        display: 'block',
+        display: 'flex',
+        justifyContent: 'space-around',
+        flexWrap: 'wrap'
     },
     links:{
         paddingTop: '0.50rem',
@@ -44,7 +48,10 @@ const styles ={
         backgroundColor: '#F2B705',
         fontWeight: 'bold',
         marginBottom: '1rem',
-        marginRight: '1rem'
+        marginRight: '1rem',
+        width: '10rem',
+        textAlign: 'center',
+        height: '1rem'
     },
 
 }
