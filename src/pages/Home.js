@@ -8,6 +8,7 @@ const Home = () =>{
       <div style={styles.links}>
         <Link style={styles.route} to="/SearchMovies">Search Movies</Link>
         <Link style={styles.route} to='/PopularMovies'>Popular Movies</Link>
+        <Link style={styles.links} to='/UpcomingMovies'>Upcoming Movies</Link>
       </div>
         
     </div>
