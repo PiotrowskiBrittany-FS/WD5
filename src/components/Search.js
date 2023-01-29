@@ -18,7 +18,7 @@ const styles = {
     searchWrapper:{
         display: "flex",
         justifyContent: "space-around",
-        width: "50%"
+        width: "25%"
     },
     searchContainer:{
         width: "25%",
