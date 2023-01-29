@@ -82,7 +82,8 @@ class SearchMovies extends Component{
   
   const styles = {
     container: {
-      backgroundColor: "#fff"
+      backgroundColor: "#fff",
+      width: "50%"
     },
     wrapper: {
       margin: "2rem",

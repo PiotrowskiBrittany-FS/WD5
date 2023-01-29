@@ -21,7 +21,7 @@ const styles = {
         width: "50%"
     },
     searchContainer:{
-        width: "50%",
+        width: "25%",
         height: "1.5rem"
     }
 }
