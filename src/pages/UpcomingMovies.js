@@ -36,7 +36,7 @@ class UpcomingMovies extends Component{
         return(
           <div style={styles.container}>
             <div style={styles.wrapper}>
-                <h2>Upcoming Movies</h2>
+                <h2 style={styles.heading}>Upcoming Movies</h2>
               {this.state.currentMovie == null ? 
                 <div style={styles.movies}>
                     <MovieList style={styles.list} viewDetails={this.viewDetails} movies={this.state.movies}/>
@@ -53,16 +53,18 @@ export default UpcomingMovies;
 
 const styles = {
   container: {
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    borderRadius: '10px'
   },
   wrapper: {
-    margin: "1rem",
+    margin: "0.25rem",
+  },
+  heading:{
+    textAlign: 'center',
+    paddingTop: '1.25rem'
   },
   movies: {
     display: "block",
-  },
-  search: {
-    padding: "1rem",
   },
   list:{
     margin: "1rem",

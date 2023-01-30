@@ -46,5 +46,6 @@ const styles = {
   },
   wrapper: {
     padding: "2rem",
+    backgroundImage: "linear-gradient(purple, cyan)",
   },
 }

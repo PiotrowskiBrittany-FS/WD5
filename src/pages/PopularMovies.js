@@ -35,7 +35,7 @@ class PopularMovies extends Component{
         return(
           <div style={styles.container}>
             <div style={styles.wrapper}>
-                <h2>Popular Movies</h2>
+                <h2 style={styles.heading}>Popular Movies</h2>
               {this.state.currentMovie == null ? 
                 <div style={styles.movies}>
                     <MovieList style={styles.list} viewDetails={this.viewDetails} movies={this.state.movies}/>
@@ -52,10 +52,15 @@ export default PopularMovies;
 
 const styles = {
     container: {
-      backgroundColor: "#fff"
+      backgroundColor: "#fff",
+      borderRadius: '10px'
     },
     wrapper: {
       margin: "1rem",
+    },
+    heading:{
+      textAlign: 'center',
+      paddingTop: '1.25rem'
     },
     movies: {
       display: "block",

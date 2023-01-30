@@ -35,7 +35,7 @@ class TopMovies extends Component{
         return(
           <div style={styles.container}>
             <div style={styles.wrapper}>
-                <h2>Top Movies of All Time</h2>
+                <h2 style={styles.heading}>Top Movies of All Time</h2>
               {this.state.currentMovie == null ? 
                 <div style={styles.movies}>
                     <MovieList style={styles.list} viewDetails={this.viewDetails} movies={this.state.movies}/>
@@ -52,11 +52,16 @@ export default TopMovies;
 
 const styles = {
     container: {
-      backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        borderRadius: '10px'
     },
     wrapper: {
       margin: "2rem",
     },
+    heading:{
+        textAlign: 'center',
+        paddingTop: '1.25rem'
+      },
     movies: {
       display: "block",
     },

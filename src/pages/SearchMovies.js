@@ -60,6 +60,7 @@ class SearchMovies extends Component{
       return(
         <div style={styles.container}>
           <div style={styles.wrapper}>
+          <h2 style={styles.heading}>Search for a Movie</h2>
             {this.state.currentMovie == null ? 
               <div style={styles.movies}>
                 <Search style={styles.search} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
@@ -82,10 +83,16 @@ class SearchMovies extends Component{
   
   const styles = {
     container: {
-      backgroundColor: "#fff"
+      backgroundColor: "#fff",
+      borderRadius: '10px'
     },
     wrapper: {
       margin: "1rem",
+      
+    },
+    heading:{
+      textAlign: 'center',
+      paddingTop: '1.25rem'
     },
     movies: {
       display: "block",

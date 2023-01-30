@@ -21,7 +21,7 @@ export default MovieList;
 
 const styles = {
     container:{
-        paddingTop: "5rem",
+        paddingTop: "0.5rem",
         width: "90%",
         display: "flex",
         justifyContent: "space-between",
