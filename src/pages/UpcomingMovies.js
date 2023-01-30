@@ -14,6 +14,17 @@ class UpcomingMovies extends Component{
         this.apiKey = 'd90675c6ac13f9cd080926e402046ab1'
       }
 
+      viewDetails = (id)=>{
+        const chosenMovie = this.state.movies.filter(movie => movie.id === id)
+    
+        const selectedMovie = chosenMovie.length > 0 ? chosenMovie[0] : null
+        this.setState({ currentMovie: selectedMovie})
+      }
+      
+      closeDetails = ()=>{
+        this.setState({currentMovie: null})
+      }
+
       render(){
         fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`)
           .then(data => data.json())

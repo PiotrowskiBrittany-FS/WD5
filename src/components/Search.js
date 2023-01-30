@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 const Search = (props)=>{
@@ -20,7 +18,9 @@ const styles = {
         justifyContent: "space-around",
     },
     searchContainer:{
-        width: "100%",
-        height: "1.5rem"
+        maxWidth: "50rem",
+        minWidth: '25rem',
+        height: "1.5rem",
+        borderRadius: '10px'
     }
 }

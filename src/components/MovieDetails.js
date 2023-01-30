@@ -17,6 +17,8 @@ const MovieDetails = (props)=>{
                 <p style={styles.info}>Release Date: </p>
                 <p>{props.currentMovie.release_date.substring(5).split("-").concat(props.currentMovie.release_date.substring(0, 4)).join("/")}</p>
                 {/* Capture the date and use a substring of 5 to return up to the 5th index in order to flip the year to the back of the string */}
+                <p style={styles.info}>Runtime: </p>
+                <p>{props.currentMovie.runtime}</p>
                 <p style={styles.info}>About: </p>
                 <p>{props.currentMovie.overview}</p>
             </div>
