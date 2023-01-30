@@ -26,6 +26,8 @@ class TopMovies extends Component{
       }
 
       render(){
+        //Automatically fetches the top movies data once the user goes to the Popular Movie page
+
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&language=en-US&page=1`)
           .then(data => data.json())
           .then(data => {

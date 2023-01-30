@@ -18,8 +18,10 @@ class SearchMovies extends Component{
         currentMovie: null
       }
       this.apiKey = 'd90675c6ac13f9cd080926e402046ab1'
+      //API key for The Movie Database
     }
   
+    //Function to handle the form submission and find the users search results
     handleSubmit = (e)=>{
       e.preventDefault();
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.userSearch}`)
@@ -30,11 +32,13 @@ class SearchMovies extends Component{
         })
     } 
   
+    //Function to handle the form submission changes and return the target value
     handleChange = (e)=>{
       e.preventDefault();
       this.setState({userSearch: e.target.value})
     }
   
+    //Function to show the pages of the returned results
     nextPage = (pageNumber)=>{
       fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.userSearch}&page=${pageNumber}`)
       .then(data => data.json())
@@ -44,6 +48,7 @@ class SearchMovies extends Component{
       })
     }
   
+    //Function for viewing the movie details
     viewDetails = (id)=>{
       const chosenMovie = this.state.movies.filter(movie => movie.id === id)
   
@@ -51,6 +56,7 @@ class SearchMovies extends Component{
       this.setState({ currentMovie: selectedMovie})
     }
     
+    //Function for closing the details of the movie
     closeDetails = ()=>{
       this.setState({currentMovie: null})
     }

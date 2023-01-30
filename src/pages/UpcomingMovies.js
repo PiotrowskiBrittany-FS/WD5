@@ -26,6 +26,8 @@ class UpcomingMovies extends Component{
       }
 
       render(){
+        //Automatically fetches the upcoming movie data once the user goes to the Popular Movie page
+        //This API is more delayed than the others and shows less up-to-date upcoming movies
         fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`)
           .then(data => data.json())
           .then(data => {

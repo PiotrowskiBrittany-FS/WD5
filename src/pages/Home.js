@@ -6,6 +6,7 @@ const Home = () =>{
     <div>
       <h2>Movie Database</h2>
       <div style={styles.links}>
+        {/* Links for the Route to follow */}
         <Link style={styles.route} to="/SearchMovies">Search Movies</Link>
         <Link style={styles.route} to='/PopularMovies'>Popular Movies</Link>
         <Link style={styles.route} to='/UpcomingMovies'>Upcoming Movies</Link>
