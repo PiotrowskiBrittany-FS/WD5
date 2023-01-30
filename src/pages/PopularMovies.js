@@ -55,19 +55,19 @@ const styles = {
       backgroundColor: "#fff"
     },
     wrapper: {
-      margin: "2rem",
+      margin: "1rem",
     },
     movies: {
       display: "block",
     },
     search: {
-      padding: "2rem",
+      padding: "1rem",
     },
     list:{
-      margin: "2rem",
-      padding: "2rem",
+      margin: "1rem",
+      padding: "1rem",
     },
     details: {
-      margin: "2rem"
+      margin: "1rem"
     }
   }

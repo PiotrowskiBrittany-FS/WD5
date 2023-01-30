@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import Logo from '../images/popcornerLogo.jpg'
+import Logo from '../images/popcornerLogo.png'
 
 const Navigation = ()=>{
     return(

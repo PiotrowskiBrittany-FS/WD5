@@ -15,17 +15,19 @@ import TopMovies from './pages/TopMovies';
 
 function App(){
   return(
-    <div style={styles.wrapper}>
-      <Navigation />
-      <div>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/Home" element={<Home />}/>
-          <Route exact path="/SearchMovies" element={<SearchMovies />}/>
-          <Route path="/PopularMovies" element={<PopularMovies />} />
-          <Route path="/UpcomingMovies" element={<UpcomingMovies />}/>
-          <Route path="/TopMovies" element={<TopMovies/>}/>
-        </Routes>
+    <div style={styles.container}>
+      <div style={styles.wrapper}>
+        <Navigation />
+        <div>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/Home" element={<Home />}/>
+            <Route exact path="/SearchMovies" element={<SearchMovies />}/>
+            <Route path="/PopularMovies" element={<PopularMovies />} />
+            <Route path="/UpcomingMovies" element={<UpcomingMovies />}/>
+            <Route path="/TopMovies" element={<TopMovies/>}/>
+          </Routes>
+        </div>
       </div>
     </div>
   )
@@ -37,8 +39,12 @@ export default App;
 
 
 const styles = {
+  container:{
+    backgroundImage: "linear-gradient(purple, cyan)",
+    height: "100%",
+    width: "100%"
+  },
   wrapper: {
-    margin: "2rem",
-    backgroundColor: "#fff"
+    padding: "2rem",
   },
 }

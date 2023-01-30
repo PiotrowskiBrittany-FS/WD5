@@ -52,23 +52,23 @@ class UpcomingMovies extends Component{
 export default UpcomingMovies;
 
 const styles = {
-    container: {
-      backgroundColor: "#fff"
-    },
-    wrapper: {
-      margin: "2rem",
-    },
-    movies: {
-      display: "block",
-    },
-    search: {
-      padding: "2rem",
-    },
-    list:{
-      margin: "2rem",
-      padding: "2rem",
-    },
-    details: {
-      margin: "2rem"
-    }
+  container: {
+    backgroundColor: "#fff"
+  },
+  wrapper: {
+    margin: "1rem",
+  },
+  movies: {
+    display: "block",
+  },
+  search: {
+    padding: "1rem",
+  },
+  list:{
+    margin: "1rem",
+    padding: "1rem",
+  },
+  details: {
+    margin: "1rem"
   }
+}

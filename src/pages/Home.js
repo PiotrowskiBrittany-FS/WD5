@@ -9,7 +9,7 @@ const Home = () =>{
         <Link style={styles.route} to="/SearchMovies">Search Movies</Link>
         <Link style={styles.route} to='/PopularMovies'>Popular Movies</Link>
         <Link style={styles.route} to='/UpcomingMovies'>Upcoming Movies</Link>
-        <Link style={styles.links} to='/TopMovies'>Top Rated Movies</Link>
+        <Link style={styles.route} to='/TopMovies'>Top Rated Movies</Link>
       </div>
         
     </div>
