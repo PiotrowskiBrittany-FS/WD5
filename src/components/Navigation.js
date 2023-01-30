@@ -10,6 +10,7 @@ const Navigation = ()=>{
                 <Link style={styles.links} to="/SearchMovies">Search Movies</Link>
                 <Link style={styles.links} to='/PopularMovies'>Popular Movies</Link>
                 <Link style={styles.links} to='/UpcomingMovies'>Upcoming Movies</Link>
+                <Link style={styles.links} to='/TopMovies'>Top Rated Movies</Link>
             </div>
         </div>
     )

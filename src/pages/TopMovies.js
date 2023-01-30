@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import MovieList from '../components/MovieList';
 import MovieDetails from '../components/MovieDetails';
 
-class UpcomingMovies extends Component{
+class TopMovies extends Component{
     constructor(){
         super()
         this.state = {
@@ -26,17 +26,16 @@ class UpcomingMovies extends Component{
       }
 
       render(){
-        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`)
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&language=en-US&page=1`)
           .then(data => data.json())
           .then(data => {
             console.log(data);
             this.setState({movies: [...data.results], totalMovies: data.total_results})
           })
-          
         return(
           <div style={styles.container}>
             <div style={styles.wrapper}>
-                <h2>Upcoming Movies</h2>
+                <h2>Top Movies of All Time</h2>
               {this.state.currentMovie == null ? 
                 <div style={styles.movies}>
                     <MovieList style={styles.list} viewDetails={this.viewDetails} movies={this.state.movies}/>
@@ -49,7 +48,7 @@ class UpcomingMovies extends Component{
 }
 
 
-export default UpcomingMovies;
+export default TopMovies;
 
 const styles = {
     container: {

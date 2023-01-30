@@ -11,6 +11,7 @@ import PopularMovies from './pages/PopularMovies';
 import SearchMovies from './pages/SearchMovies';
 import Home from './pages/Home';
 import UpcomingMovies from './pages/UpcomingMovies';
+import TopMovies from './pages/TopMovies';
 
 function App(){
   return(
@@ -23,6 +24,7 @@ function App(){
           <Route exact path="/SearchMovies" element={<SearchMovies />}/>
           <Route path="/PopularMovies" element={<PopularMovies />} />
           <Route path="/UpcomingMovies" element={<UpcomingMovies />}/>
+          <Route path="/TopMovies" element={<TopMovies/>}/>
         </Routes>
       </div>
     </div>
